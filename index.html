@@ -27,6 +27,7 @@
       <span class="logo-w">W</span>ear
       <span class="logo-w">W</span>arehouse
     </h1>
+
     <figure>
       <a href="#">
       <img src="images/logo-scarfcat.png" alt="dapper cartoon cat wearing a scarf" >
@@ -40,29 +41,35 @@
           <li><a href="#" class="button">Scarves</a></li>
           <li><a href="#" class="button">sign in</a></li>
           <li><a href="#" class="button"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
-
-
-
+          <!--SNOW! Code from https://codepen.io/NickyCDK/pen/AIonk
+                <div id="snow">
+                </div>-->
         </ul>
       </nav>
-<!--SNOW! Code from https://codepen.io/NickyCDK/pen/AIonk-->
-      <div id="snow">
-      </div>
+
   </header>
 
   <main>
     <aside>
-
-      <form>
-        <label>Sign up for our mailing list:
-          <input type="email" name="email">
-        </label>
-
-        <input type="submit" value="Submit">
-        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-      </form>
-    </aside>
-
+      <script>
+      function validateForm() {
+          var x = document.forms["myForm"]["email"].value;
+          var atpos = x.indexOf("@");
+          var dotpos = x.lastIndexOf(".");
+          if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+              alert("Not a valid e-mail address");
+              return false;
+          }
+      }
+      </script>
+    <form name="myForm" action="success.html" onsubmit="return validateForm();" method="post">
+      <label>Sign up for our mailing list:
+        <input type="email" name="email">
+      </label>
+      <input type="submit" value="Submit">
+      <!--<i class="fa fa-shopping-cart" aria-hidden="true"></i>-->
+    </form>>
+</aside>
     <section>
       <h2>Scarves</h2>
 <div class="row">
@@ -132,7 +139,7 @@
       <li><a href="#">cart</a></li>
 </ul>
  </nav>
-      <form>
+     <form>
         <label>Sign up for our mailing list:
           <input type="email" name="email">
         </label>
