@@ -1,0 +1,182 @@
+html{
+  background-color:grey;
+}
+body {
+  font-size: 100%;
+  font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+p {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: lighter;
+  color: #2d2d2d;
+}
+
+/* TODO: size images manually so this is not necessary */
+
+img {
+  max-height: 20rem;
+
+
+
+}
+
+/***************** NAV *****************/
+
+  .button{
+  	-moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+  	-webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+  	box-shadow:inset 0px 34px 0px -15px #b54b3a;
+  	background-color:#CC3514;
+  	border:1px solid #241d13;
+  	display:inline-block;
+  	cursor:pointer;
+  	color:#ffffff;
+  	font-family:Arial;
+  	font-size:15px;
+  	font-weight:bold;
+  	padding:9px 23px;
+  	text-decoration:none;
+    text-align:center;
+  	text-shadow:0px -1px 0px #7a2a1d;
+    float:left;
+
+  }
+  .button:hover {
+  	background-color:#b34332;
+  }
+  .button:active {
+  	position:relative;
+  	top:1px;
+  }
+
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+
+/**************** HERO *****************/
+header{
+  background-color: grey;
+}
+header img {
+  max-height: 20rem;
+  margin-left:5rem;
+  padding: 3em;
+  border-radius: 300px;
+  float:center;
+}
+ header img:hover{
+ -webkit-box-shadow: 0px 0px 30px 0px white;
+ -moz-box-shadow:    0px 0px 30px 0px white;
+  box-shadow:         0px 0px 30px 0px white;
+}
+header img:last-of-type:hover{
+  -moz-box-shadow:    0px 0px 30px 0px white;
+  box-shadow:         0px 0px 30px 0px white;
+}
+header h1{
+  font-family: 'Pacifico', cursive;
+  font-size: 3em;
+}
+h1 .logo-w {
+  font-size: 6rem;
+  font-family: 'Pacifico', cursive;
+}
+
+
+/**************** ASIDE ****************/
+aside{
+  background-color: black;
+  padding: 3em;
+}
+
+input[type="submit"] {
+  padding: .25rem;
+  background-color: #3D7FCF;
+  border: 1px solid #3D7FCF;
+  border-radius: 5px;
+  font-size: .75rem;
+  color: white;
+}
+
+/*********** PRODUCTS SECTION ***********/
+
+section h2{
+  font-family: 'Pacifico', cursive;
+  font-size: 4em;
+  color: #cc1914;
+}
+section p{
+  color:white;
+}
+section {
+  padding: 6rem;
+  background-color: #0b3b61;
+}
+
+.item-container h3{
+  color:#faff00;
+
+}
+.col-md-4 {
+display:flex;
+flex-direction: column;
+justify-content:flex-start;
+align:content: center;
+}
+.col-md-4{
+  padding:2em;
+}
+
+h2 {
+  padding-top: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #2d2d2d;
+}
+
+h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #2d2d2d;
+}
+
+
+/*********SNOW*********/
+#snow{
+	background: none;
+	font-family: Androgyne;
+	background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index:1;
+	-webkit-animation: snow 10s linear infinite;
+	-moz-animation: snow 10s linear infinite;
+	-ms-animation: snow 10s linear infinite;
+	animation: snow 10s linear infinite;
+}
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-moz-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+@-webkit-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-ms-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
