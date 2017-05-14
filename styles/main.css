@@ -23,8 +23,8 @@ p {
 
 img {
   max-width: 100%;
-  width:30em;
-  height:30em;
+  width:20em;
+  height:20em;
   display:flex;
   justify-content:center;
   align-items:flex-end;
@@ -64,8 +64,6 @@ img {
 .topnav .icon {
     display: none;
 }
-
-
 
 
 /**************** HERO *****************/
@@ -154,7 +152,6 @@ section {
 display:flex;
 justify-content: center;
 max-width:100%;
-
 font-family: 'Sanchez', serif;
 font-size:1.875em;/*30px*/
 background-color: black;
@@ -172,6 +169,7 @@ box-shadow: .5em .5em 1em black;
   flex-direction:column;
   align-items:center;
   padding: 1.5em;
+
 }
 .box{
   display:flex;
@@ -186,17 +184,23 @@ box-shadow: .5em .5em 1em black;
   display:flex;
   flex-direction:column;
   justify-content:center;
-  width: 25em;
-  height:25em;
-  background-color:skyblue;
+  align-items: center;
+  text-align:center;
+  width:25em;
   padding-left: 2em;
   padding-right:2em;
   padding-top:2em;
   margin-top:1em;
-  box-shadow: 0em 0em 1em 0em black;
+
+
+}
+i:hover{
+  color: blue;
+}
+
 }
 p{
-  font-size: 1.3em;
+  font-size: 1em;
 }
 h2 {
   padding-top: 1.5rem;
@@ -214,39 +218,77 @@ h3 {
 }
 
 
-/*********SNOW*********/
-#snow{
-	background: none;
-	font-family: Androgyne;
-	background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
-	height: 100%;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
-	z-index:1;
-	-webkit-animation: snow 10s linear infinite;
-	-moz-animation: snow 10s linear infinite;
-	-ms-animation: snow 10s linear infinite;
-	animation: snow 10s linear infinite;
+/*media queries*/
+@media screen and (max-width: 400px) {
+    header {
+      width:100%;
+      font-size:100%;
+    }
+    header img{
+      display:none;
+    }
+    header h1{
+
+      font-family: 'Pacifico', cursive;
+      font-size: 2em;
+      color:red;
+
+    }
+    h1 .logo-w {
+      font-size: 4rem;
+      font-family: 'Pacifico', cursive;
+      color:red;
+      text-shadow:.5em .5em 1em white;
+    }
+    header{
+      background-image:none;
+    }
+header q{
+  display:none;
 }
-@keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    padding-bottom:0em;
+    text-shadow: .1em .1em black;
 }
-@-moz-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+    aside{
+      background-color: black;
+      position:center;
+    }
+    .item-container{
+      margin-left:2em;
+    }
+  }
+footer{
+  background-image:url("../images/logo-scarfcat.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  padding:8em;
 }
-@-webkit-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+footer p{
+  font-size: 1em;
 }
-@-ms-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+
+
+}
+}
+@media screen and (max-width: 768px) and (min-width: 520px) {
+html{
+  font-size:50%;
+}
+.box{
+  padding:30em;
+}
+}
+#item{
+  width:30em;
+  height: 10em;
+  background-color:white;
+  float:right;
+
 }

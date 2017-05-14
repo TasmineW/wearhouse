@@ -60,3 +60,36 @@ function validateForm() {
       alert(" Thank you " + x +"!"+ " You will not regret your choice!" );
     }
 }
+
+//Shoping cart
+console.log("Shoping cart, Assignment 7");
+var shoppingCart = [];
+   function addToCart(value)
+   {
+       shoppingCart.push(value.name,value.price)
+       alert(shoppingCart);
+
+   }
+
+   //toggle function
+   function toggle_visibility(id) {
+         var e = document.getElementById(id);
+         if(e.style.display == 'block')
+            e.style.display = 'none';
+         else
+            e.style.display = 'block';
+
+      }
+//array
+var shoppingCart =["Reversible Plaid","Wool Cable Knit","Northern Lights","Ombre Infinity","Fringed Plaid","Multi Color","Etro Paisley-Print Silk","Ashby Twill"];
+shoppingCart [0] = ["Reversible Plaid"];
+shoppingCart [1] = ["Wool Cable Knit"];
+shoppingCart [2] = ["Northern Lights"];
+shoppingCart [3] = ["Ombre Infinity"];
+shoppingCart [4] = ["Fringed Plaid"];
+shoppingCart [5] = ["Multi Color"];
+shoppingCart [6] = ["Etro Paisley-Print Silk"];
+shoppingCart [7] = ["Ashby Twill"];
+
+
+console.log(shoppingCart.length);
