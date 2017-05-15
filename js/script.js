@@ -81,15 +81,18 @@ var shoppingCart = [];
 
       }
 //array
-var shoppingCart =["Reversible Plaid","Wool Cable Knit","Northern Lights","Ombre Infinity","Fringed Plaid","Multi Color","Etro Paisley-Print Silk","Ashby Twill"];
-shoppingCart [0] = ["Reversible Plaid"];
-shoppingCart [1] = ["Wool Cable Knit"];
-shoppingCart [2] = ["Northern Lights"];
-shoppingCart [3] = ["Ombre Infinity"];
-shoppingCart [4] = ["Fringed Plaid"];
-shoppingCart [5] = ["Multi Color"];
-shoppingCart [6] = ["Etro Paisley-Print Silk"];
-shoppingCart [7] = ["Ashby Twill"];
+var item =["Reversible Plaid","Wool Cable Knit","Northern Lights","Ombre Infinity","Fringed Plaid","Multi Color","Etro Paisley-Print Silk","Ashby Twill"];
+item [0] = ["Reversible Plaid"];
+item [1] = ["Wool Cable Knit"];
+item [2] = ["Northern Lights"];
+item [3] = ["Ombre Infinity"];
+item [4] = ["Fringed Plaid"];
+item [5] = ["Multi Color"];
+item [6] = ["Etro Paisley-Print Silk"];
+item [7] = ["Ashby Twill"];
 
 
-console.log(shoppingCart.length);
+//var price =["26.99","49.99","29.99"," 11.99","18.99","22.99"," 249.99","70.99"];
+//price []
+//price[]
+console.log(item.length);

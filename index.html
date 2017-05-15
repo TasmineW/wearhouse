@@ -52,8 +52,14 @@
           <!-- toggle button -->
 <li><a href="#" onclick="toggle_visibility('item');"><i class="fa fa-cart-arrow-down" aria-hidden="false"></i></a></li>
 
-<div id="item" >Cart items here
-
+<div id="item" >
+  <ul class=pro>
+    <li><a class="add-to-cart" href="#" data-name="Reversible Plaid" data-price="26.99">Reversible Plaid $26.99</a></li>
+    <li><a class="add-to-cart" href="#" data-name="Wool Cable Knit" data-price="49.99">Wool Cable Knit $49.99</a></li>
+    <li><a class="add-to-cart" href="#" data-name="Northern Lights" data-price="29.99">Northern Lights $29.99</a></li>
+    <li><a class="add-to-cart" href="#" data-name="Ombre Infinity" data-price="11.99">Ombre Infinity $11.99</a></li>
+</ul>
+<button id="clear-cart">Clear Cart</button>
 </div>
 
 
@@ -114,7 +120,7 @@
           <p class="price">18.99</p>
           <div class=button>
 <i class="fa fa-cart-plus fa-5x" aria-hidden="true" onclick="addToCart({ name: 'Fringed Plaid', price: '18.99' })"></i>
-<i class="fa fa-window-close fa-4x" aria-hidden="true"></i>
+<i class="fa fa-window-close fa-4x" aria-hidden="true" onclick="removeFromCart()"></i>
 </div>
         </div>
           </div>

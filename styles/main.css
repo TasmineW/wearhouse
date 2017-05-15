@@ -290,5 +290,10 @@ html{
   height: 10em;
   background-color:white;
   float:right;
+  color:black;
 
+
+}
+#item button{
+  margin-bottom: 10em;
 }
