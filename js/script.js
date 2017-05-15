@@ -70,6 +70,19 @@ var shoppingCart = [];
        alert(shoppingCart);
 
    }
+//Worth a shot...right?
+//   function removeFromCart(item.length)
+  // {
+//       shoppingCart.splice(value.name,value.price)
+//       alert(shoppingCart);
+
+//   }
+
+
+
+
+
+
 
    //toggle function
    function toggle_visibility(id) {
@@ -81,6 +94,7 @@ var shoppingCart = [];
 
       }
 //array
+//array
 var item =["Reversible Plaid","Wool Cable Knit","Northern Lights","Ombre Infinity","Fringed Plaid","Multi Color","Etro Paisley-Print Silk","Ashby Twill"];
 item [0] = ["Reversible Plaid"];
 item [1] = ["Wool Cable Knit"];
@@ -91,8 +105,15 @@ item [5] = ["Multi Color"];
 item [6] = ["Etro Paisley-Print Silk"];
 item [7] = ["Ashby Twill"];
 
+console.log(item.length);
+
+function item(name, price) {
+    shoppingCart.name = name
+    shoppingCart.price = price
+}
+
 
 //var price =["26.99","49.99","29.99"," 11.99","18.99","22.99"," 249.99","70.99"];
 //price []
 //price[]
-console.log(item.length);
+console.log(shoppingCart.length);
