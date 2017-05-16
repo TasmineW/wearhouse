@@ -20,7 +20,10 @@
   <!--google fonts-->
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet">
-
+  <link rel="stylesheet" href="/path/to/bootstrap.min.css">
+  <script src="/path/to/jquery.min.js"></script>
+  <script src="/path/to/bootstrap.min.js"></script>
+  <script src="js/jquery.mycart.js"></script>
 
 
 
@@ -50,7 +53,8 @@
           <li><a href="#">Scarves</a></li>
           <li><a href="#">sign in</a></li>
           <!-- toggle button -->
-<li><a href="#" onclick="toggle_visibility('item');"><i class="fa fa-cart-arrow-down" aria-hidden="false"></i></a></li>
+<li><a href="#" onclick="toggle_visibility('item');"><i class="fa fa-cart-arrow-down" aria-hidden="false"> click to hide the item list </i></a></li>
+
           <!--<li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
           <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
           <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
@@ -61,12 +65,33 @@
 </div>
 <div id="item" >
   <ul >
-    <li><a class="add-to-cart" href="#" data-name="Reversible Plaid" data-price="26.99">Reversible Plaid $26.99</a></li>
-    <li><a class="add-to-cart" href="#" data-name="Wool Cable Knit" data-price="49.99">Wool Cable Knit $49.99</a></li>
-    <li><a class="add-to-cart" href="#" data-name="Northern Lights" data-price="29.99">Northern Lights $29.99</a></li>
-    <li><a class="add-to-cart" href="#" data-name="Ombre Infinity" data-price="11.99">Ombre Infinity $11.99</a></li>
+
+    <li><a class="add-to-cart" href="#" onclick="addToCart({ name: 'Reversible Plaid', price: '26.99' })">Add Reversible Plaid $26.99</a></li>
+    <li><a class="remove-from-cart" href="#" onclick="removeFromCart({ name: 'Reversible Plaid', price: '26.99' })">Remove Reversible Plaid $26.99</a></li>
+
+    <li><a class="add-to-cart" href="#" onclick="addToCart({ name: 'Fringed Plaid', price: '18.99' })">Add Fringed Plaid $18.99</a></li>
+    <li><a class="remove-from-cart" href="#" onclick="removeFromCart({ name: 'Fringed Plaid', price: '18.99' })">Add Fringed Plaid $18.99</a></li>
+
+    <li><a class="add-to-cart" href="#" onclick="addToCart({ name: 'Multi Color', price: '22.99' })">Add Multi Color $22.99</a></li>
+    <li><a class="remove-from-cart" href="#" onclick="removeFromCart({ name: 'Multi Color', price: '22.99' })">Add Multi Color $22.99</a></li>
+
+    <li><a class="add-to-cart" href="#" onclick="addToCart({ name: 'Northern Lights', price: '22.99' })">Add Northern Lights $22.99</a></li>
+    <li><a class="remove-from-cart" href="#" onclick="removeFromCart({ name: 'Northern Lights', price: '22.99' })">Add Northern Lights $22.99</a></li>
+
+    <li><a class="add-to-cart" href="#" onclick="addToCart({ name: 'Ashby Twill', price: '70.99' })">Add Ashby Twill $70.99</a></li>
+    <li><a class="remove-from-cart" href="#" onclick="removeFromCart({ name: 'Ashby Twill', price: '70.99' })">Add Ashby Twill $70.99</a></li>
+
+    <li><a class="add-to-cart" href="#" onclick="addToCart({ name: 'Wool Cable Knit', price: '49.99' })">Add Cable Knit $49.99</a></li>
+    <li><a class="remove-from-cart" href="#" onclick="removeFromCart({ name: 'Wool Cable Knit', price: '49.99' })">Add Cable Knit $49.99</a></li>
+
+    <li><a class="add-to-cart" href="#" onclick="addToCart({ name: 'Etro Paisley-Print Silk', price: '26.99' })">Add Etro Paisley-Print Silk $26.99</a></li>
+    <li><a class="remove-from-cart" href="#" onclick="removeFromCart({ name: 'Etro Paisley-Print Silk', price: '26.99' })">Add Etro Paisley-Print Silk $26.99</a></li>
+
+  <li><a class="add-to-cart" href="#" onclick="addToCart({ name: 'Ombre Infinity', price: '11.99' })">Add Ombre Infinity $11.99</a></li>
+  <li><a class="remove-from-cart" href="#" onclick="removeFromCart({ name: 'Ombre Infinity', price: '11.99' })">Add Ombre Infinity $11.99</a></li>
+
 </ul>
-<button id="clear-cart">Clear Cart</button>
+<button id="clear-cart" onclick="clearCart(value)">Clear Cart</button>
 </div>
   </header>
 
@@ -98,8 +123,9 @@
           <p>Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</p>
           <p class="price">26.99</p>
           <div class=button>
-        <i class="fa fa-cart-plus fa-5x" aria-hidden="true" onclick="addToCart({ name: 'Reversible Plaid', price: '26.99' })"></i>
-        <i class="fa fa-window-close fa-4x" aria-hidden="true" onclick="removeFromCart(name)"></i>
+        <i class="fa fa-cart-plus fa-5x" aria-hidden="true" onclick="toggleItem(name)"></i>
+
+
         </div>
       </div>
         </div>
@@ -116,8 +142,8 @@
           <p>Generously sized, extra soft and featuring a dazzling fringe, this scarf is rendered in a versatile gray, black and white plaid. Expertly beat the cold with style. 100% acrylic.</p>
           <p class="price">18.99</p>
           <div class=button>
-<i class="fa fa-cart-plus fa-5x" aria-hidden="true" onclick="addToCart({ name: 'Fringed Plaid', price: '18.99' })"></i>
-<i class="fa fa-window-close fa-4x" aria-hidden="true" onclick="removeFromCart()"></i>
+<i class="fa fa-cart-plus fa-5x" aria-hidden="true" onclick="toggleItem(name)"></i>
+
 </div>
         </div>
           </div>
@@ -130,8 +156,8 @@
           <p>The Who What Where Oversize Color-Block Square Scarf is big, bold, and designed to twist and wrap any way you wish. All the colors of the season are harmonized in this oversize accent, so you can adjust to contrast or match your outfit; soft and lush, it’s your stylish standoff against cold AC and unexpected fall breezes. 100% acrylic.</p>
           <p class="price">22.99</p>
           <div class=button>
-        <i class="fa fa-cart-plus fa-5x" aria-hidden="true" onclick="addToCart({ name: 'Multi Color', price: '22.99' })"></i>
-        <i class="fa fa-window-close fa-4x" aria-hidden="true"></i>
+        <i class="fa fa-cart-plus fa-5x" aria-hidden="true" onclick="toggleItem(name)"></i>
+
       </div>
         </div>
           </div>
@@ -145,8 +171,8 @@
           <p>Handmade by women in Agra, sales provide medical and educational support in this remote area of India. Crinkly 100% cotton.</p>
           <p class="price">29.99</p>
           <div class=button>
-          <i class="fa fa-cart-plus fa-5x" aria-hidden="true" onclick="addToCart({ name: 'Northern Lights', price: '29.99' })"></i>
-          <i class="fa fa-window-close fa-4x" aria-hidden="true" onclick="removeFromCart({ name: 'Northern Lights', price: '29.99' })"></i>
+          <i class="fa fa-cart-plus fa-5x" aria-hidden="true" onclick="toggleItem(name)"></i>
+
 </div>
         </div>
           </div>
@@ -160,8 +186,7 @@
           <p>A dip-dye effect adds color and dimension to a cozy infinity scarf featuring a soft, chunky knit. 100% acrylic.</p>
           <p class="price">11.99</p>
           <div class=button>
-          <i class="fa fa-cart-plus fa-5x" aria-hidden="true" onclick="addToCart({ name: 'Ombre Infinity', price: '11.99' })"></i>
-          <i class="fa fa-window-close fa-4x" aria-hidden="true"></i>
+          <i class="fa fa-cart-plus fa-5x" aria-hidden="true" onclick="toggleItem(name)"></i>
         </div>
         </div>
           </div>
@@ -176,8 +201,7 @@
           <p>Faribault brings you the Ashby Twill Scarf in Natural. Woven with a 'broken' twill technique, the Ashby Twill Scarf has a slight zigzag texture. Made in USA, this timeless scarf is crafted with luxurious merino wool and finished with heather gray fringe. 100% Merino wool.</p>
           <p class="price">70.99</p>
           <div class=button>
-          <i class="fa fa-cart-plus fa-5x" aria-hidden="true" onclick="addToCart({ name: 'Fringed Plaid', price: '18.99' })"></i>
-          <i class="fa fa-window-close fa-4x" aria-hidden="true"></i>
+          <i class="fa fa-cart-plus fa-5x" aria-hidden="true" onclick="toggleItem(name)"></i>
         </div>
                   </div>
           </div>
@@ -193,8 +217,7 @@
         </div>
           <p class="price">49.99</p>
           <div class=button>
-      <i class="fa fa-cart-plus fa-5x" aria-hidden="true" onclick="addToCart({ name: 'Wool Cable Knit', price: '49.99' })"></i>
-      <i class="fa fa-window-close fa-4x" aria-hidden="true"></i>
+      <i class="fa fa-cart-plus fa-5x" aria-hidden="true" onclick="toggleItem(name)"></i>
 </div>
 </div>
 
@@ -209,15 +232,16 @@
           <p>Luxurious silk scarf with subtle paisley pattern. 100% silk.</p>
           <p class="price">26.99</p>
           <div class=button>
-      <!-- <i class="fa fa-cart-plus fa-5x" aria-hidden="true" onclick="addToCart({ name:'Etro Paisly-Print Silk, price:'26.99' })"></i>-->
-        <i class="fa fa-window-close fa-4x" aria-hidden="true"></i>
+        <i class="fa fa-cart-plus fa-5x" aria-hidden="true" onclick="toggleItem(name)"></i>
         </div>
         </div>
           </div>
         </div>
 
 </div>
+
     </div>
+<
     </section>
   <footer>
 

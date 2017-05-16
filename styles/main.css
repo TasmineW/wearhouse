@@ -195,9 +195,11 @@ box-shadow: .5em .5em 1em black;
 
 }
 i:hover{
-  color: blue;
+  color: green;
 }
-
+.togglecart i{
+  color:pink;
+}
 }
 p{
   font-size: 1em;
@@ -287,13 +289,24 @@ html{
 }
 #item{
   width:30em;
-  height: 10em;
+  height: 50em;
   background-color:white;
-  float:right;
+
   color:black;
 
 
 }
 #item button{
   margin-bottom: 10em;
+}
+.add-to-cart{
+ text-decoration: none;
+margin-left:  2em;
+ color: green;
+}
+.add-to-cart:hover{
+  color:pink;
+}
+.remove-from-cart{
+  color:red;
 }

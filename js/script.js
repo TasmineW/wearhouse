@@ -47,7 +47,7 @@ var products = [
     "description": "Faribault brings you the Ashby Twill Scarf in Natural. Woven with a 'broken' twill technique, the Ashby Twill Scarf has a slight zigzag texture. Made in USA, this timeless scarf is crafted with luxurious merino wool and finished with heather gray fringe. 100% Merino wool",
     "imageTitle": "twill.jpg"
   }
-]
+];
 console. log("Brave attempt at assignment5");
 function validateForm() {
     var x = document.forms["myForm"]["email"].value;
@@ -64,11 +64,22 @@ function validateForm() {
 //Shoping cart
 console.log("Shoping cart, Assignment 7");
 var shoppingCart = [];
+
    function addToCart(value)
    {
-       shoppingCart.push(value.name,value.price)
+       shoppingCart.push(value.name)
        alert(shoppingCart);
+   }
 
+   function removeFromCart(value)
+   {
+     shoppingCart.pop(value.name)
+     alert(shoppingCart);
+   }
+   function clearCart(value)
+   {
+     shoppingCart.splice(value.name)
+     alert(shoppingCart);
    }
 //Worth a shot...right?
 //   function removeFromCart(item.length)
@@ -77,16 +88,36 @@ var shoppingCart = [];
 //       alert(shoppingCart);
 
 //   }
+var item =["Reversible Plaid","Wool Cable Knit","Northern Lights","Ombre Infinity","Fringed Plaid","Multi Color","Etro Paisley-Print Silk","Ashby Twill"];
 
 
+for (var i = 0; i < item.length; i++) {
+console.log(item[i]);
+}
+for (var key in item){
+  console.log(key+""+item[key]);
+}
+function toggleItem(name) {
+  var itemIndex = item.indexOf(name);
+  if (itemIndex == -1) {
+    item.push(name);
+    alert('added to Cart ' + name);
+    console.log('added to Cart ' + name);
+  } else {
+    item.splice(itemIndex, 1);
+    alert('removed from Cart ' + name);
+    console.log('removed from Cart ' + name);
+  }
 
+  return name;
+}
 
 
 
 
    //toggle function
-   function toggle_visibility(id) {
-         var e = document.getElementById(id);
+   function toggle_visibility(item) {
+         var e = document.getElementById(item);
          if(e.style.display == 'block')
             e.style.display = 'none';
          else
@@ -95,15 +126,14 @@ var shoppingCart = [];
       }
 //array
 //array
-var item =["Reversible Plaid","Wool Cable Knit","Northern Lights","Ombre Infinity","Fringed Plaid","Multi Color","Etro Paisley-Print Silk","Ashby Twill"];
-item [0] = ["Reversible Plaid"];
-item [1] = ["Wool Cable Knit"];
-item [2] = ["Northern Lights"];
-item [3] = ["Ombre Infinity"];
-item [4] = ["Fringed Plaid"];
-item [5] = ["Multi Color"];
-item [6] = ["Etro Paisley-Print Silk"];
-item [7] = ["Ashby Twill"];
+//item [0] = ["Reversible Plaid"];
+//item [1] = ["Wool Cable Knit"];
+//item [2] = ["Northern Lights"];
+//item [3] = ["Ombre Infinity"];
+//item [4] = ["Fringed Plaid"];
+//item [5] = ["Multi Color"];
+//item [6] = ["Etro Paisley-Print Silk"];
+//item [7] = ["Ashby Twill"];
 
 console.log(item.length);
 
