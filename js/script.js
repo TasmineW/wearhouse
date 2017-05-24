@@ -147,3 +147,35 @@ function item(name, price) {
 //price []
 //price[]
 console.log(shoppingCart.length);
+
+
+
+
+
+var cart = [];
+
+$('.add').click(function(event){
+  var name = $(event.target.parentElement).find('.name').text();
+  var description = $(event.target.parentElement).find('.description').text();
+  var price = $(event.target.parentElement).find('.price').text();
+
+  // alternatively you could use this.parentElement.  "this" represents the button that was clicked.
+
+  // add the item to array
+  cart.push({
+    name: name,
+    description: description,
+    price: price});
+
+  console.log(cart);
+  refreshBadge();
+});
+
+// show count next to cart
+function refreshBadge() {
+  /* show count in badge */
+  var badge = $('header').find('.badge');
+  if (cart) {
+    badge.text(cart.length);
+  }
+}
